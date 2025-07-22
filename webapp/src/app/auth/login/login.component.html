@@ -1,0 +1,65 @@
+<div class="container">
+  
+
+  <div class="left">
+    <!-- <img src="assets/images/imglogin.jpg" alt="Login ration" /> -->
+     
+     <img src="https://scontent.fbey10-1.fna.fbcdn.net/v/t39.30808-6/274921125_137160192131970_5560204882870414362_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=zZ1cb2sZKZkQ7kNvwHr7zpT&_nc_oc=AdkczoiGk1SQcQi9MIp3qlgR3hxzf9ACpTNpyxGEOUg7J1k2-HhrQ9WkWhszK360woM&_nc_zt=23&_nc_ht=scontent.fbey10-1.fna&_nc_gid=AawnXanh7r92K87jwOVrEw&oh=00_AfQHuWV7qDXSKsBXuGI32phm0J26OMD7Lnf_qyEb2Fhutw&oe=68830908" alt="Placeholder" />
+    
+  </div>
+  <div class="right">
+    <h2>Login</h2>
+    <!-- <form (submit)="submit(); $event.preventDefault();"> -->
+    <!-- <form (ngSubmit)="login()"> -->
+    
+
+
+
+    <form [formGroup]="loginForm" (ngSubmit)="submit()">
+
+    <!-- <form (ngSubmit)="submit()"> -->
+            <!-- Username -->
+            <div class="mb-3">
+              <label for="username" class="form-label">Username&nbsp;</label>
+              <input
+                id="username"
+                type="text"
+                class="form-control"
+                formControlName="username"
+                required
+              />
+            </div>
+
+            <!-- Password -->
+            <div class="mb-3">
+              <label for="password" class="form-label">Password &nbsp;</label>
+              <input
+                id="password"
+                type="password"
+                class="form-control"
+                formControlName="password"
+                required
+              />
+            </div>
+
+            <!-- Error Message -->
+            <!-- <div *ngIf="errorMessage" class="alert alert-danger"> -->
+            <div class="alert alert-danger">
+              {{ errorMessage }}
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary w-50" [disabled]="loginForm.invalid">
+              Login
+            </button>
+          </form>
+
+
+
+
+
+
+  </div>
+</div>
+
+
